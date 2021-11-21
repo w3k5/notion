@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  loan-bot:
+    build: .
+    container_name: loan-bot
+    command: node dist/main.js
+    environment:
+      - NOTION_TOKEN=
+      - TELEGRAM_TOKEN=
+      - DATABASE_ID=
+    ports: 
+      - "3000:3000"
